@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:dio/dio.dart';
 
 // components
 import '../../components/topic_list.dart';
@@ -7,6 +8,9 @@ import '../../components/drawer.dart';
 // pages
 import '../Person/index.dart';
 
+// 实例化Dio
+Dio dio = new Dio();
+
 class PageHome extends StatefulWidget {
   @override
   _PageHomeState createState() => _PageHomeState();
@@ -14,6 +18,7 @@ class PageHome extends StatefulWidget {
 
 class _PageHomeState extends State<PageHome>
     with SingleTickerProviderStateMixin {
+  // tabController
   TabController _tabController;
 
   @override
@@ -84,7 +89,7 @@ class _PageHomeState extends State<PageHome>
         controller: _tabController,
         children: <Widget>[
           ComponentTopicList(),
-          Text('1'),
+          ComponentTopicList(tab: 'ask'),
           Text('1'),
           Text('1'),
           Text('1'),
