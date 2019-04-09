@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext ctx) {
     return MaterialApp(
       title: 'Cnode',
-      theme: ThemeData(primaryColor: Colors.redAccent),
+      theme: ThemeData(primaryColor: Colors.red),
       home: PageContainer(),
     );
   }
